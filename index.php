@@ -8,6 +8,7 @@
         echo '<br>';
          $_SESSION['password'] = $generatedPsswd;
         echo $_SESSION['password'];
+        header('Location: ./redirect.php');
     };
    
     // function password_generate($chars) 
@@ -19,7 +20,13 @@
     // if(isset($_GET['length'])){
     //     echo password_generate($_GET['length']);
     // };
-
+    // $letters = 'asd';
+    // $x ='bnm';
+    // $y = $letters.$x;
+    // echo '<br>';
+    // echo $y;
+    // echo '<br>';
+    // var_dump($y)
 ?>
 
 
