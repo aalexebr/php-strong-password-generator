@@ -1,26 +1,15 @@
 <?php
-    
-    // function pswdRndmGen ($numb){
+    require_once __DIR__.'/php_logic.php';
 
+    // function password_generate($chars) 
+    //     {
+    //     $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!%&?';
+    //     return substr(str_shuffle($data), 0, $chars);
+    //     }
+
+    // if(isset($_GET['length'])){
+    //     echo password_generate($_GET['length']);
     // };
-    function password_generate($chars) 
-        {
-        $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!%&?';
-        return substr(str_shuffle($data), 0, $chars);
-        }
-    // echo password_generate(7);
-    if(isset($_GET['length'])){
-        // echo password_generate((int)$_GET['length']);
-        // var_dump($_GET) ;
-        // echo $_GET['length'];
-        // $num = $_GET['length'];
-        // echo '<br>';
-        // echo $num;
-        // echo '<br>';
-        // echo password_generate($num);
-        // echo '<br>';
-        echo password_generate($_GET['length']);
-    };
 
 ?>
 
