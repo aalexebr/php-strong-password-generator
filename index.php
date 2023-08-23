@@ -36,7 +36,8 @@
     <form action="" method="GET">
         <div>
             <label for="length">insert pswd length</label>
-            <input type="number" name="length" min="1" max="8" step="1">
+            <input type="number" name="length" min="1" max="8" step="1" 
+            value="<?php if(isset($_GET['length'])){echo $_GET['length'];}?>">
         </div>
         <button type="submit">
             submit
