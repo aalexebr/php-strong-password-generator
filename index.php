@@ -1,11 +1,11 @@
 <?php
     
-    function pswdRndmGen ($numb){
+    // function pswdRndmGen ($numb){
 
-    };
+    // };
     function password_generate($chars) 
         {
-        $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+        $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!%&?';
         return substr(str_shuffle($data), 0, $chars);
         }
     // echo password_generate(7);
@@ -42,6 +42,16 @@
         <button type="submit">
             submit
         </button>
+        <?php
+            if(isset($_GET['length'])){
+        ?>
+            <h1>
+                <?php 
+                    echo password_generate($_GET['length']);
+                ?>
+            </h1>
+        <?php   
+        }?>
     </form>
 </body>
 </html>
