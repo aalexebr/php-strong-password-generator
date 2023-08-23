@@ -1,6 +1,15 @@
 <?php
+    session_start();
     require_once __DIR__.'/php_logic.php';
-
+    
+    if(isset($_GET['length'])){
+        $generatedPsswd = password_generate($_GET['length']);
+        echo $generatedPsswd;
+        echo '<br>';
+         $_SESSION['password'] = $generatedPsswd;
+        echo $_SESSION['password'];
+    };
+   
     // function password_generate($chars) 
     //     {
     //     $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz!%&?';
@@ -36,11 +45,12 @@
         ?>
             <h1>
                 <?php 
-                    echo password_generate($_GET['length']);
+                    echo $generatedPsswd;
                 ?>
             </h1>
         <?php   
         }?>
     </form>
+    <a href="./redirect.php">redirect</a>
 </body>
 </html>

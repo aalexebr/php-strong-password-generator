@@ -6,8 +6,8 @@
         return substr(str_shuffle($data), 0, $chars);
         }
         
-    if(isset($_GET['length'])){
-        echo password_generate($_GET['length']);
-    };
+    // if(isset($_GET['length'])){
+    //     echo password_generate($_GET['length']);
+    // };
 
 ?>
